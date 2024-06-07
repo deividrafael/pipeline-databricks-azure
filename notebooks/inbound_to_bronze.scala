@@ -70,7 +70,7 @@ display(df_endereco)
 // COMMAND ----------
 
 val path = "dbfs:/mnt/dados/bronze/dataset_endereco"
-df_endereco.write.format("parquet").save(path)
+df_endereco.write.format("parquet").mode(SaveMode.Overwrite).save(path)
 
 // COMMAND ----------
 
